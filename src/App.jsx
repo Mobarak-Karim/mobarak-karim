@@ -222,7 +222,7 @@ const researchAreas = [
   },
   {
     title: "Optical Design and Simulation",
-    text: "Zemax based optical design and analysis for laser scanning microscopy, including scan-lens evaluation, achromatic doublet optimization, aberration analysis, and system performance tradeoff assessment.",
+    text: "Zemax-based optical design and analysis for laser scanning microscopy, including scan-lens evaluation, achromatic doublet optimization, aberration analysis, and system performance tradeoff assessment.",
   },
   {
     title: "Image Analysis and Translation",
@@ -287,11 +287,11 @@ const toolProjects = [
   },
   {
     title: "Instrument Control and Environmental Support",
-    text: "Arduino and LabVIEW based control for temperature regulation, CO₂ support, and integrated hardware workflows for long-term live embryo imaging experiments.",
+    text: "Arduino and LabVIEW-based control for temperature regulation, CO₂ support, and integrated hardware workflows for long-term live embryo imaging experiments.",
   },
   {
     title: "Quantitative Imaging and Optical Analysis",
-    text: "Fiji, MATLAB, and Python based analysis for attenuation mapping, vascular quantification, and multimodal data interpretation, together with Zemax based optical design and scan-lens performance analysis for laser scanning microscopy systems.",
+    text: "Fiji, MATLAB, and Python-based analysis for attenuation mapping, vascular quantification, and multimodal data interpretation, together with Zemax based optical design and scan-lens performance analysis for laser scanning microscopy systems.",
   },
 ];
 
@@ -1380,7 +1380,7 @@ export default function App() {
           </div>
 
           <div className="relative z-10 lg:pr-4">
-            <SectionLabel>PhD Candidate in Biomedical Engineering</SectionLabel>
+            <SectionLabel>Biomedical Optics Researcher</SectionLabel>
 
             <motion.div
               initial={{ opacity: 0, y: 22 }}
@@ -1621,13 +1621,13 @@ export default function App() {
                   Biomedical Optics Researcher and Multimodal Imaging Systems Developer
                 </h2>
                 <p className="mt-5 text-base leading-8 text-slate-300">
-                  PhD candidate in Biomedical Engineering at the University of Houston with over six years of research experience in biomedical optics, photonics, and multimodal imaging. My research centers on the development of co-registered optical coherence tomography and light-sheet fluorescence microscopy platforms for embryonic imaging, with additional expertise in two-photon microscopy, quantitative image analysis, and custom software development for imaging workflows.
-                </p>
+                  <p>
+                  I earned my PhD in Biomedical Engineering from the University of Houston in Spring 2026. I have more than six years of research experience in biomedical optics, photonics, and multimodal optical imaging. My work focuses on the development of co-registered optical coherence tomography and light-sheet fluorescence microscopy platforms for embryonic imaging, integrating optical system design, two-photon microscopy, quantitative image analysis, and custom software tools for advanced biomedical imaging workflows.                </p>
                 <p className="mt-4 text-base leading-8 text-slate-300">
                   I work at the intersection of optical system design, instrument integration, and biological imaging, with hands-on experience in beam delivery, optical alignment, scanning geometry optimization, environmental support for long-term imaging, and end-to-end data processing. My work spans zebrafish and mouse embryo models and focuses on translating advanced imaging technologies into quantitative tools for developmental biology, tissue optics, and phenotype analysis.
                 </p>
                 <p className="mt-4 text-base leading-8 text-slate-300">
-                  My background also includes Zemax based optical analysis for laser scanning microscopy, including scan-lens evaluation, achromatic doublet optimization, aberration assessment, and imaging performance tradeoff analysis. Across research projects, I have contributed to system validation, multimodal co-registration, quantitative attenuation mapping, and publication-ready imaging workflows that support both methodological innovation and biological discovery.
+                  My background also includes Zemax-based optical analysis for laser scanning microscopy, including scan-lens evaluation, achromatic doublet optimization, aberration assessment, and imaging performance tradeoff analysis. Across research projects, I have contributed to system validation, multimodal co-registration, quantitative attenuation mapping, and publication-ready imaging workflows that support both methodological innovation and biological discovery.
                 </p>
               </GlassCard>
             </motion.div>
