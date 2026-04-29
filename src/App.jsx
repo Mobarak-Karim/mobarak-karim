@@ -167,13 +167,6 @@ const journalArticles = [
   {
     status: "Published",
     citation:
-      "Abu Montakim Tareq, Md Mohotasin Hossain, Main Uddin, Farhanul Islam, Zidan Khan, Md Mobarak Karim, Chadni Lyzu, Duygu Ağagündüz, A. S. M. Ali Reza, Talha Bin Emran, and Raffaele Capasso. “Chemical profiles and pharmacological attributes of Apis cerana indica beehives using combined experimental and computer-aided studies.” Heliyon 9(4), e15016 (2023).",
-    doi: "10.1016/j.heliyon.2023.e15016",
-    link: "https://doi.org/10.1016/j.heliyon.2023.e15016",
-  },
-  {
-    status: "Published",
-    citation:
       "Mumtaza Mumu, Ayan Das, Talha Bin Emran, Saikat Mitra, Fahadul Islam, Arpita Roy, Md Mobarak Karim, Rajib Das, Moon Nyeo Park, Deepak Chandran, Rohit Sharma, Mayeen Uddin Khandaker, Abubakr M. Idris, and Bonglee Kim. “Fucoxanthin: A promising phytochemical on diverse pharmacological targets.” Frontiers in Pharmacology 13, 929442 (2022).",
     doi: "10.3389/fphar.2022.929442",
     link: "https://doi.org/10.3389/fphar.2022.929442",
