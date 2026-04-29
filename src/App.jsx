@@ -913,7 +913,7 @@ function PublicationModal({ item, onClose }) {
 
 function CitationCard({ item, onOpen }) {
   return (
-    <motion.article {.....fadeUp()}>
+    <motion.article {...fadeUp()}>
       <GlassCard className="overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_20px_60px_rgba(34,211,238,0.08)]">
         <div className="grid gap-0 xl:grid-cols-[1.25fr_0.85fr]">
           <div className="p-6 sm:p-8">
@@ -1004,7 +1004,7 @@ function CitationCard({ item, onOpen }) {
 
 function FullCitationItem({ item, index, showStatus = false }) {
   return (
-    <motion.div {.....fadeUp(index * 0.04)}>
+    <motion.div {...fadeUp(index * 0.04)}>
       <div className="rounded-[22px] border border-white/10 bg-white/[0.03] p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)]">
         <div className="flex flex-wrap items-center gap-3">
           {showStatus ? <StatusTag>{item.status}</StatusTag> : <StatusTag>{item.year}</StatusTag>}
@@ -1029,7 +1029,7 @@ function FullCitationItem({ item, index, showStatus = false }) {
 
 function GalleryCard({ item, onOpen }) {
   return (
-    <motion.button {.....fadeUp()} type="button" onClick={onOpen} className="block h-full w-full text-left">
+    <motion.button {...fadeUp()} type="button" onClick={onOpen} className="block h-full w-full text-left">
       <GlassCard className="h-full overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)]">
         <div className="relative">
           {item.type === "image" ? (
@@ -1072,7 +1072,7 @@ function GalleryCard({ item, onOpen }) {
 
 function EducationCard({ item, index }) {
   return (
-    <motion.div {.....fadeUp(index * 0.06)}>
+    <motion.div {...fadeUp(index * 0.06)}>
       <GlassCard className="h-full p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)]">
         <div className="flex items-start gap-4">
           <div className="rounded-2xl bg-cyan-400/10 p-3 text-cyan-300">
@@ -1098,7 +1098,7 @@ function EducationCard({ item, index }) {
 
 function TrainingCard({ item, index }) {
   return (
-    <motion.div {.....fadeUp(index * 0.06)}>
+    <motion.div {...fadeUp(index * 0.06)}>
       <GlassCard className="h-full p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)]">
         <div className="flex items-start gap-4">
           <div className="rounded-2xl bg-cyan-400/10 p-3 text-cyan-300">
@@ -1118,7 +1118,7 @@ function TrainingCard({ item, index }) {
 
 function ToolCard({ item, index }) {
   return (
-    <motion.div {.....fadeUp(index * 0.06)}>
+    <motion.div {...fadeUp(index * 0.06)}>
       <GlassCard className="h-full p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)]">
         <div className="flex items-start gap-4">
           <div className="rounded-2xl bg-cyan-400/10 p-3 text-cyan-300">
@@ -1140,7 +1140,7 @@ function ToolCard({ item, index }) {
 
 function EngagementCard({ item, index }) {
   return (
-    <motion.div {.....fadeUp(index * 0.06)}>
+    <motion.div {...fadeUp(index * 0.06)}>
       <GlassCard className="h-full overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)]">
         <div className="relative h-56 overflow-hidden">
           <img src={item.image} alt={item.title} className="h-full w-full object-cover" />
@@ -1614,15 +1614,15 @@ export default function App() {
 
         <ParallaxSection id="about" className="pb-14 lg:pb-20" glow="cyan">
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-            <motion.div {.....fadeUp()}>
+            <motion.div {...fadeUp()}>
               <GlassCard className="p-7 sm:p-8">
                 <SectionLabel>About</SectionLabel>
                 <h2 className="text-3xl font-semibold text-white sm:text-4xl">
                   Biomedical Optics Researcher and Multimodal Imaging Systems Developer
                 </h2>
                 <p className="mt-5 text-base leading-8 text-slate-300">
-                  <p>
                   I earned my PhD in Biomedical Engineering from the University of Houston in Spring 2026. I have more than six years of research experience in biomedical optics, photonics, and multimodal optical imaging. My work focuses on the development of co-registered optical coherence tomography and light-sheet fluorescence microscopy platforms for embryonic imaging, integrating optical system design, two-photon microscopy, quantitative image analysis, and custom software tools for advanced biomedical imaging workflows.                </p>
+                </p>
                 <p className="mt-4 text-base leading-8 text-slate-300">
                   I work at the intersection of optical system design, instrument integration, and biological imaging, with hands-on experience in beam delivery, optical alignment, scanning geometry optimization, environmental support for long-term imaging, and end-to-end data processing. My work spans zebrafish and mouse embryo models and focuses on translating advanced imaging technologies into quantitative tools for developmental biology, tissue optics, and phenotype analysis.
                 </p>
@@ -1634,7 +1634,7 @@ export default function App() {
 
             <div className="grid gap-5 sm:grid-cols-2">
               {quickStats.map((stat, index) => (
-                <motion.div key={stat.label} {.....fadeUp(index * 0.05)}>
+                <motion.div key={stat.label} {...fadeUp(index * 0.05)}>
                   <GlassCard className="p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)]">
                     <div className="text-2xl font-semibold text-white">{stat.value}</div>
                     <div className="mt-2 text-sm leading-7 text-slate-400">{stat.label}</div>
@@ -1642,7 +1642,7 @@ export default function App() {
                 </motion.div>
               ))}
 
-              <motion.div {.....fadeUp(0.22)} className="sm:col-span-2">
+              <motion.div {...fadeUp(0.22)} className="sm:col-span-2">
                 <GlassCard className="overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)]">
                   <div className="grid gap-0 md:grid-cols-[0.42fr_0.58fr]">
                     <div className="relative min-h-[320px]">
@@ -1684,7 +1684,7 @@ export default function App() {
               {researchAreas.map((item, index) => (
                 <motion.div
                   key={item.title}
-                  {.....fadeUp(index * 0.06)}
+                  {...fadeUp(index * 0.06)}
                   className="rounded-[24px] border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)]"
                 >
                   <div className="mb-4 inline-flex rounded-2xl bg-cyan-400/10 p-3 text-cyan-300">
