@@ -1990,13 +1990,9 @@ export default function App() {
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
                   </SecondaryButton>
-                  <SecondaryButton href="/Md_Mobarak_Karim_CV.pdf">
-                    <Download className="h-4 w-4" />
-                    Academic CV
-                  </SecondaryButton>
                   <SecondaryButton href="/Md_Mobarak_Karim_Resume.pdf">
                     <Download className="h-4 w-4" />
-                    Industry Résumé
+                    Resume
                   </SecondaryButton>
                 </div>
               </div>
