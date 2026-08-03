@@ -296,33 +296,6 @@ const toolProjects = [
   },
 ];
 
-const blogPosts = [
-  {
-    category: "Optical Engineering",
-    date: "Coming soon",
-    title: "Building a Co-registered OCT and Light-sheet Microscopy Platform",
-    excerpt:
-      "A practical look at optical architecture, beam combining, alignment, synchronization, and validation for a multimodal embryo-imaging system.",
-    tags: ["OCT", "LSFM", "System Integration"],
-  },
-  {
-    category: "Quantitative Imaging",
-    date: "Coming soon",
-    title: "From OCT Signal to Depth-resolved Tissue Attenuation",
-    excerpt:
-      "How noise, confocal response, sensitivity roll-off, phantom validation, and biological interpretation shape reliable attenuation mapping.",
-    tags: ["Tissue Optics", "Image Analysis", "Validation"],
-  },
-  {
-    category: "Research Practice",
-    date: "Coming soon",
-    title: "Designing Long-duration Imaging Experiments for Developing Embryos",
-    excerpt:
-      "Engineering considerations for environmental stability, acquisition timing, phototoxicity, data quality, and reproducible longitudinal imaging.",
-    tags: ["Embryogenesis", "Microscopy", "Experimental Design"],
-  },
-];
-
 const quickStats = [
   { value: "7+ years", label: "Biomedical optics and imaging research" },
   { value: "OCT, OCM, OCE, OCTA, LSFM", label: "Multimodal optical imaging platforms" },
