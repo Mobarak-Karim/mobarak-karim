@@ -382,7 +382,6 @@ const navItems = [
   { href: "#gallery", label: "Gallery" },
   { href: "#education", label: "Education" },
   { href: "#projects", label: "Tools" },
-  { href: "#blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -1140,33 +1139,6 @@ function ToolCard({ item, index }) {
   );
 }
 
-function BlogCard({ item, index }) {
-  return (
-    <motion.article {...fadeUp(index * 0.06)}>
-      <GlassCard className="flex h-full flex-col p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)] sm:p-7">
-        <div className="flex items-center justify-between gap-4">
-          <div className="inline-flex rounded-2xl bg-cyan-400/10 p-3 text-cyan-300">
-            <BookOpen className="h-5 w-5" />
-          </div>
-          <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-3 py-1 text-xs font-medium text-amber-200">
-            {item.date}
-          </span>
-        </div>
-        <div className="mt-6 text-xs font-semibold uppercase tracking-[0.26em] text-cyan-300">
-          {item.category}
-        </div>
-        <h3 className="mt-3 text-xl font-semibold leading-8 text-white">{item.title}</h3>
-        <p className="mt-4 flex-1 text-sm leading-7 text-slate-400">{item.excerpt}</p>
-        <div className="mt-6 flex flex-wrap gap-2">
-          {item.tags.map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
-          ))}
-        </div>
-      </GlassCard>
-    </motion.article>
-  );
-}
-
 function EngagementCard({ item, index }) {
   return (
     <motion.div {...fadeUp(index * 0.06)}>
@@ -1913,35 +1885,6 @@ export default function App() {
           </div>
         </ParallaxSection>
 
-        <ParallaxSection id="blog" className="pb-14 lg:pb-20" glow="blue">
-          <div className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-3xl">
-              <SectionLabel>Writing and Insights</SectionLabel>
-              <h2 className="text-3xl font-semibold text-white sm:text-5xl">
-                Notes from the optical bench
-              </h2>
-              <p className="mt-4 text-base leading-8 text-slate-300 sm:text-lg">
-                Practical articles on biomedical optics, optical system development, quantitative imaging, and the engineering behind reliable microscopy experiments.
-              </p>
-            </div>
-            <a
-              href={LINKEDIN_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex self-start items-center gap-2 text-sm font-medium text-cyan-300 transition hover:text-cyan-200 lg:self-auto"
-            >
-              Follow updates on LinkedIn
-              <ExternalLink className="h-4 w-4" />
-            </a>
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-3">
-            {blogPosts.map((item, index) => (
-              <BlogCard key={item.title} item={item} index={index} />
-            ))}
-          </div>
-        </ParallaxSection>
-
         <ParallaxSection id="contact" className="pb-10" glow="sky">
           <GlassCard className="overflow-hidden">
             <div className="grid gap-0 lg:grid-cols-[1fr_0.8fr]">
@@ -2070,9 +2013,6 @@ export default function App() {
               </a>
               <a href="#gallery" className="transition hover:text-cyan-300">
                 Gallery
-              </a>
-              <a href="#blog" className="transition hover:text-cyan-300">
-                Blog
               </a>
               <a href="#contact" className="transition hover:text-cyan-300">
                 Contact
