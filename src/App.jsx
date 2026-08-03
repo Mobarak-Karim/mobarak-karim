@@ -46,6 +46,7 @@ const portfolioImages = {
   spieGroup: "/images/spie.jpeg",
   spiePresident: "/images/spie-president.jpeg",
   bolGroup: "/images/bol-g.jpeg",
+  graduation: "/images/phd-hooding-2026.png",
 };
 
 const featuredPublications = [
@@ -151,11 +152,11 @@ const journalArticles = [
     link: "#",
   },
   {
-    status: "Submitted",
+    status: "Published",
     citation:
-      "Leah A. Lewis, Md Mobarak Karim, et al. “Multimodal Optical Imaging for the Assessment of the Teratogenic Effects of Embryonic Ethanol Exposure on Zebrafish Development.” Submitted to JBO.",
-    doi: "",
-    link: "#",
+      "Leah A. Lewis, Md Mobarak Karim, et al. “Multimodal Optical Imaging for the Assessment of the Teratogenic Effects of Ethanol on Zebrafish Development.” Journal of Biomedical Optics 31(6), 066004 (2026).",
+    doi: "10.1117/1.JBO.31.6.066004",
+    link: "https://doi.org/10.1117/1.JBO.31.6.066004",
   },
   {
     status: "In preparation",
@@ -295,6 +296,33 @@ const toolProjects = [
   },
 ];
 
+const blogPosts = [
+  {
+    category: "Optical Engineering",
+    date: "Coming soon",
+    title: "Building a Co-registered OCT and Light-sheet Microscopy Platform",
+    excerpt:
+      "A practical look at optical architecture, beam combining, alignment, synchronization, and validation for a multimodal embryo-imaging system.",
+    tags: ["OCT", "LSFM", "System Integration"],
+  },
+  {
+    category: "Quantitative Imaging",
+    date: "Coming soon",
+    title: "From OCT Signal to Depth-resolved Tissue Attenuation",
+    excerpt:
+      "How noise, confocal response, sensitivity roll-off, phantom validation, and biological interpretation shape reliable attenuation mapping.",
+    tags: ["Tissue Optics", "Image Analysis", "Validation"],
+  },
+  {
+    category: "Research Practice",
+    date: "Coming soon",
+    title: "Designing Long-duration Imaging Experiments for Developing Embryos",
+    excerpt:
+      "Engineering considerations for environmental stability, acquisition timing, phototoxicity, data quality, and reproducible longitudinal imaging.",
+    tags: ["Embryogenesis", "Microscopy", "Experimental Design"],
+  },
+];
+
 const quickStats = [
   { value: "7+ years", label: "Biomedical optics and imaging research" },
   { value: "OCT, OCM, OCE, OCTA, LSFM", label: "Multimodal optical imaging platforms" },
@@ -381,6 +409,7 @@ const navItems = [
   { href: "#gallery", label: "Gallery" },
   { href: "#education", label: "Education" },
   { href: "#projects", label: "Tools" },
+  { href: "#blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -1138,6 +1167,33 @@ function ToolCard({ item, index }) {
   );
 }
 
+function BlogCard({ item, index }) {
+  return (
+    <motion.article {...fadeUp(index * 0.06)}>
+      <GlassCard className="flex h-full flex-col p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)] sm:p-7">
+        <div className="flex items-center justify-between gap-4">
+          <div className="inline-flex rounded-2xl bg-cyan-400/10 p-3 text-cyan-300">
+            <BookOpen className="h-5 w-5" />
+          </div>
+          <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-3 py-1 text-xs font-medium text-amber-200">
+            {item.date}
+          </span>
+        </div>
+        <div className="mt-6 text-xs font-semibold uppercase tracking-[0.26em] text-cyan-300">
+          {item.category}
+        </div>
+        <h3 className="mt-3 text-xl font-semibold leading-8 text-white">{item.title}</h3>
+        <p className="mt-4 flex-1 text-sm leading-7 text-slate-400">{item.excerpt}</p>
+        <div className="mt-6 flex flex-wrap gap-2">
+          {item.tags.map((tag) => (
+            <Tag key={tag}>{tag}</Tag>
+          ))}
+        </div>
+      </GlassCard>
+    </motion.article>
+  );
+}
+
 function EngagementCard({ item, index }) {
   return (
     <motion.div {...fadeUp(index * 0.06)}>
@@ -1287,10 +1343,6 @@ export default function App() {
     return () => window.clearInterval(timer);
   }, []);
 
-  useEffect(() => {
-    setActiveGalleryIndex(null);
-  }, [galleryFilter]);
-
   const filteredGalleryItems = galleryItems.filter((item) => {
     if (galleryFilter === "all") return true;
     return item.type === galleryFilter;
@@ -1298,6 +1350,10 @@ export default function App() {
 
   const openGallery = (index) => setActiveGalleryIndex(index);
   const closeGallery = () => setActiveGalleryIndex(null);
+  const changeGalleryFilter = (filter) => {
+    setActiveGalleryIndex(null);
+    setGalleryFilter(filter);
+  };
 
   const showPrevGalleryItem = () => {
     setActiveGalleryIndex((prev) =>
@@ -1621,7 +1677,7 @@ export default function App() {
                   Biomedical Optics Researcher and Multimodal Imaging Systems Developer
                 </h2>
                 <p className="mt-5 text-base leading-8 text-slate-300">
-                  I earned my PhD in Biomedical Engineering from the University of Houston in Spring 2026. I have more than six years of research experience in biomedical optics, photonics, and multimodal optical imaging. My work focuses on the development of co-registered optical coherence tomography and light-sheet fluorescence microscopy platforms for embryonic imaging, integrating optical system design, two-photon microscopy, quantitative image analysis, and custom software tools for advanced biomedical imaging workflows.                </p>
+                  I earned my PhD in Biomedical Engineering from the University of Houston in Spring 2026. I have more than six years of research experience in biomedical optics, photonics, and multimodal optical imaging. My work focuses on the development of co-registered optical coherence tomography and light-sheet fluorescence microscopy platforms for embryonic imaging, integrating optical system design, two-photon microscopy, quantitative image analysis, and custom software tools for advanced biomedical imaging workflows.
                 </p>
                 <p className="mt-4 text-base leading-8 text-slate-300">
                   I work at the intersection of optical system design, instrument integration, and biological imaging, with hands-on experience in beam delivery, optical alignment, scanning geometry optimization, environmental support for long-term imaging, and end-to-end data processing. My work spans zebrafish and mouse embryo models and focuses on translating advanced imaging technologies into quantitative tools for developmental biology, tissue optics, and phenotype analysis.
@@ -1767,7 +1823,7 @@ export default function App() {
               <button
                 key={filter}
                 type="button"
-                onClick={() => setGalleryFilter(filter)}
+                onClick={() => changeGalleryFilter(filter)}
                 className={cn(
                   "rounded-full border px-4 py-2 text-sm font-medium transition",
                   galleryFilter === filter
@@ -1831,6 +1887,41 @@ export default function App() {
           </div>
         </ParallaxSection>
 
+        <ParallaxSection className="pb-14 lg:pb-20" glow="sky">
+          <GlassCard className="overflow-hidden">
+            <div className="grid lg:grid-cols-[1.35fr_0.65fr]">
+              <figure className="relative aspect-[3/2] overflow-hidden lg:aspect-auto lg:min-h-[520px]">
+                <img
+                  src={portfolioImages.graduation}
+                  alt="Md Mobarak Karim receiving his doctoral hood at the University of Houston commencement ceremony"
+                  className="h-full w-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(2,8,23,0.48),transparent_38%)]" />
+                <figcaption className="absolute inset-x-0 bottom-0 p-5 text-sm text-slate-200 sm:p-7">
+                  Doctoral hooding ceremony • University of Houston • 2026
+                </figcaption>
+              </figure>
+
+              <div className="flex flex-col justify-center border-t border-white/10 p-7 sm:p-9 lg:border-l lg:border-t-0 lg:p-10">
+                <SectionLabel>Ph.D. Milestone</SectionLabel>
+                <div className="mb-5 inline-flex w-fit rounded-2xl bg-cyan-400/10 p-3 text-cyan-300">
+                  <GraduationCap className="h-6 w-6" />
+                </div>
+                <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+                  Ph.D. in Biomedical Engineering
+                </h2>
+                <p className="mt-3 text-base font-medium text-cyan-300">University of Houston • Spring 2026</p>
+                <p className="mt-5 text-sm leading-8 text-slate-300">
+                  This milestone reflects years of research in biomedical optics, photonics, and multimodal imaging, including the development of co-registered OCT and light-sheet fluorescence microscopy platforms for embryonic imaging.
+                </p>
+                <p className="mt-4 text-sm leading-8 text-slate-400">
+                  With sincere gratitude to my advisor, Dr. Kirill V. Larin, my committee, collaborators, laboratory colleagues, friends, and family for their mentorship and support throughout this journey.
+                </p>
+              </div>
+            </div>
+          </GlassCard>
+        </ParallaxSection>
+
         <ParallaxSection id="projects" className="pb-14 lg:pb-20" glow="cyan">
           <div className="mb-8 max-w-3xl">
             <SectionLabel>Software and Tools</SectionLabel>
@@ -1845,6 +1936,35 @@ export default function App() {
           <div className="grid gap-6 lg:grid-cols-3">
             {toolProjects.map((item, index) => (
               <ToolCard key={item.title} item={item} index={index} />
+            ))}
+          </div>
+        </ParallaxSection>
+
+        <ParallaxSection id="blog" className="pb-14 lg:pb-20" glow="blue">
+          <div className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-3xl">
+              <SectionLabel>Writing and Insights</SectionLabel>
+              <h2 className="text-3xl font-semibold text-white sm:text-5xl">
+                Notes from the optical bench
+              </h2>
+              <p className="mt-4 text-base leading-8 text-slate-300 sm:text-lg">
+                Practical articles on biomedical optics, optical system development, quantitative imaging, and the engineering behind reliable microscopy experiments.
+              </p>
+            </div>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex self-start items-center gap-2 text-sm font-medium text-cyan-300 transition hover:text-cyan-200 lg:self-auto"
+            >
+              Follow updates on LinkedIn
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {blogPosts.map((item, index) => (
+              <BlogCard key={item.title} item={item} index={index} />
             ))}
           </div>
         </ParallaxSection>
@@ -1872,7 +1992,11 @@ export default function App() {
                   </SecondaryButton>
                   <SecondaryButton href="/Md_Mobarak_Karim_CV.pdf">
                     <Download className="h-4 w-4" />
-                    Download CV
+                    Academic CV
+                  </SecondaryButton>
+                  <SecondaryButton href="/Md_Mobarak_Karim_Resume.pdf">
+                    <Download className="h-4 w-4" />
+                    Industry Résumé
                   </SecondaryButton>
                 </div>
               </div>
@@ -1893,10 +2017,10 @@ export default function App() {
                           m.k.mobarak@gmail.com
                         </a>
                         <a
-                          href="mailto:mkarim@cougarnet.uh.edu"
+                          href="mailto:mkarim@uh.edu"
                           className="mt-1 block text-sm text-slate-400 transition hover:text-cyan-300"
                         >
-                          mkarim@cougarnet.uh.edu
+                          mkarim@uh.edu
                         </a>
                       </div>
                     </div>
@@ -1977,6 +2101,9 @@ export default function App() {
               </a>
               <a href="#gallery" className="transition hover:text-cyan-300">
                 Gallery
+              </a>
+              <a href="#blog" className="transition hover:text-cyan-300">
+                Blog
               </a>
               <a href="#contact" className="transition hover:text-cyan-300">
                 Contact
