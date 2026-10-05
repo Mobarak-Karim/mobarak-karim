@@ -222,12 +222,12 @@ const researchExperience = [
     dates: "Aug 2026 – Present",
     lab: "Richards-Kortum Laboratory · PI: Dr. Rebecca Richards-Kortum",
     summary:
-      "Developing optical and computational microscopy technologies for AccessPath and PrecisionView, with emphasis on translational imaging, digital pathology, and robust instrument integration.",
+      "Developing optical and computational microscopy technologies for AccessPath, with emphasis on translational imaging, digital pathology, and robust instrument integration.",
     highlights: [
       "Zemax-based lens and relay design, optical integration, alignment, and performance characterization for AccessPath microscopy.",
       "Developed automated XYZ acquisition with autofocus, frame averaging, background correction, image stitching, and parallel virtual H&E processing in a unified Python GUI.",
       "Lead AccessPath APHA-H Phase II optics activities, including array-microscopy architecture and phase-mask design, fabrication, and validation.",
-      "Investigate novel contrast mechanisms and excitation/emission wavelength combinations for virtual H&E imaging and contribute to PrecisionView optical-system development.",
+      "Investigate novel contrast mechanisms and excitation/emission wavelength combinations to improve virtual H&E image contrast and reduce optical background.",
     ],
   },
   {
@@ -334,7 +334,7 @@ const toolProjects = [
 const quickStats = [
   { value: "Rice University", label: "Postdoctoral Associate · Richards-Kortum Lab" },
   { value: "AccessPath", label: "Optics, automation, array microscopy, and virtual H&E" },
-  { value: "PrecisionView", label: "Optical-system development and characterization" },
+  { value: "Virtual H&E", label: "Contrast optimization and computational pathology workflows" },
   { value: "OCT + 1P/2P LSFM", label: "Co-registered multimodal imaging platforms" },
   { value: "Zemax OpticStudio", label: "Lens, relay, and imaging-system design" },
   { value: "Python / MATLAB / LabVIEW", label: "Automation, analysis, and instrumentation" },
@@ -1437,7 +1437,7 @@ export default function App() {
               transition={{ duration: 0.7, delay: 0.08 }}
               className="mt-7 max-w-3xl text-lg leading-9 text-slate-300 sm:text-xl"
             >
-              I am a Postdoctoral Associate in Dr. Rebecca Richards-Kortum’s laboratory at Rice University, developing optical and computational microscopy for AccessPath and PrecisionView. My current work spans Zemax optical design, automated XYZ microscopy, array microscopy and phase-mask optics, virtual H&E, and quantitative imaging, building on my Ph.D. development of co-registered OCT–LSFM platforms for embryo imaging.
+              I am a Postdoctoral Associate in Dr. Rebecca Richards-Kortum’s laboratory at Rice University, developing optical and computational microscopy for AccessPath. My current work spans Zemax optical design, automated XYZ microscopy, array microscopy and phase-mask optics, virtual H&E, and quantitative imaging, building on my Ph.D. development of co-registered OCT–LSFM platforms for embryo imaging.
             </motion.p>
 
             <motion.div
@@ -1541,7 +1541,6 @@ export default function App() {
             >
               <Tag>Rice University</Tag>
               <Tag>AccessPath</Tag>
-              <Tag>PrecisionView</Tag>
               <Tag>Virtual H&E</Tag>
               <Tag>Array Microscopy</Tag>
               <Tag>Zemax OpticStudio</Tag>
@@ -1658,7 +1657,7 @@ export default function App() {
                   Postdoctoral Researcher in Biomedical Optics and Computational Microscopy
                 </h2>
                 <p className="mt-5 text-base leading-8 text-slate-300">
-                  I am a Postdoctoral Associate in the Richards-Kortum Laboratory, Department of Bioengineering at Rice University. My current research focuses on optical and computational microscopy for AccessPath and PrecisionView, integrating optical design, automated image acquisition, computational processing, and translational imaging workflows.
+                  I am a Postdoctoral Associate in the Richards-Kortum Laboratory, Department of Bioengineering at Rice University. My current research focuses on optical and computational microscopy for AccessPath, integrating optical design, automated image acquisition, computational processing, and translational imaging workflows.
                 </p>
                 <p className="mt-4 text-base leading-8 text-slate-300">
                   For AccessPath, I develop Zemax-based optical designs and automated microscopy workflows that combine motorized XYZ acquisition, autofocus, averaging, background correction, stitching, and virtual H&E processing. I also lead Phase II optics activities involving array-microscopy architecture and phase-mask design, fabrication, and validation.
