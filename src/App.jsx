@@ -24,6 +24,8 @@ import {
 
 const SCHOLAR_URL = "https://scholar.google.com/citations?user=pQwQspwAAAAJ&hl=en";
 const LINKEDIN_URL = "https://www.linkedin.com/in/md-mobarak-karim-259ab9124/";
+const ACADEMIC_CV_URL = "/Md_Mobarak_Karim_Academic_CV.pdf";
+const RESUME_URL = "/Md_Mobarak_Karim_Resume.pdf";
 
 const portfolioImages = {
   hero: "/images/hero-octls.jpg",
@@ -159,9 +161,9 @@ const journalArticles = [
     link: "https://doi.org/10.1117/1.JBO.31.6.066004",
   },
   {
-    status: "In preparation",
+    status: "Submitted",
     citation:
-      "James Klein, Md Mobarak Karim, et al. “A novel tissue clearing method for deep tissue embryonic imaging.” In preparation for Optics Letters.",
+      "James L. Klein, Md Mobarak Karim, Christian Zevallos-Delgado, Manmohan Singh, Salavat R. Aglyamov, and Kirill V. Larin. “Tartrazine-Based Optical Clearing for Monitoring Embryogenesis with Optical Coherence Tomography.” Submitted to Optics Letters.",
     doi: "",
     link: "#",
   },
@@ -212,22 +214,55 @@ const conferenceProceedings = [
   },
 ];
 
+const researchExperience = [
+  {
+    role: "Postdoctoral Associate",
+    institution: "Rice University · Department of Bioengineering",
+    location: "Houston, Texas, USA",
+    dates: "Aug 2026 – Present",
+    lab: "Richards-Kortum Laboratory · PI: Dr. Rebecca Richards-Kortum",
+    summary:
+      "Developing optical and computational microscopy technologies for AccessPath and PrecisionView, with emphasis on translational imaging, digital pathology, and robust instrument integration.",
+    highlights: [
+      "Zemax-based lens and relay design, optical integration, alignment, and performance characterization for AccessPath microscopy.",
+      "Developed automated XYZ acquisition with autofocus, frame averaging, background correction, image stitching, and parallel virtual H&E processing in a unified Python GUI.",
+      "Lead AccessPath APHA-H Phase II optics activities, including array-microscopy architecture and phase-mask design, fabrication, and validation.",
+      "Investigate novel contrast mechanisms and excitation/emission wavelength combinations for virtual H&E imaging and contribute to PrecisionView optical-system development.",
+    ],
+  },
+  {
+    role: "Graduate Research Assistant · Ph.D. Researcher",
+    institution: "University of Houston · Biomedical Optics Laboratory",
+    location: "Houston, Texas, USA",
+    dates: "Jan 2021 – May 2026",
+    lab: "Advisor: Dr. Kirill V. Larin",
+    summary:
+      "Developed and validated co-registered OCT–LSFM platforms for simultaneous structural and molecular imaging of embryonic development.",
+    highlights: [
+      "Integrated 1051-nm swept-source OCT with one- and two-photon LSFM for longitudinal zebrafish and mouse embryo imaging.",
+      "Achieved approximately 7–7.6 μm axial resolution, 15 μm lateral resolution, and ~100 dB OCT sensitivity.",
+      "Developed quantitative attenuation-mapping methods and MATLAB/Python pipelines for reconstruction, co-registration, morphometry, segmentation, and 3D visualization.",
+      "Led system integration, experimental imaging, troubleshooting, quantitative analysis, publication preparation, and mentoring of junior researchers.",
+    ],
+  },
+];
+
 const researchAreas = [
   {
-    title: "Multimodal Optical Imaging",
-    text: "Development of co-registered OCT and LSFM platforms for simultaneous structural and molecular imaging of embryonic development across zebrafish and murine models.",
+    title: "Optical & Computational Microscopy",
+    text: "Design and integration of fluorescence and computational microscopy systems, including automated acquisition, autofocus, image stitching, background correction, frame averaging, and virtual H&E workflows.",
   },
   {
-    title: "Quantitative OCT and Tissue Optics",
-    text: "Depth-resolved attenuation coefficient mapping, quantitative image analysis, and computational workflows for tissue characterization during embryonic development.",
+    title: "Optical Design & Array Microscopy",
+    text: "Zemax-based lens and relay design, phase-mask optics, array-microscopy architecture, optical alignment, component evaluation, and imaging-performance characterization.",
   },
   {
-    title: "Optical Design and Simulation",
-    text: "Zemax-based optical design and analysis for laser scanning microscopy, including scan-lens evaluation, achromatic doublet optimization, aberration analysis, and system performance tradeoff assessment.",
+    title: "Multimodal OCT–LSFM Imaging",
+    text: "Co-registered OCT and one- and two-photon light-sheet fluorescence microscopy for simultaneous structural and molecular imaging of zebrafish and mouse embryonic development.",
   },
   {
-    title: "Image Analysis and Translation",
-    text: "End-to-end pipelines for image processing, registration, visualization, and biologically meaningful quantification that support both methodological development and biological discovery.",
+    title: "Quantitative Imaging & Tissue Optics",
+    text: "Depth-resolved attenuation mapping, multimodal co-registration, morphometry, segmentation, 3D/4D visualization, image-quality assessment, and biologically meaningful quantitative analysis.",
   },
 ];
 
@@ -283,28 +318,28 @@ const trainingPrograms = [
 
 const toolProjects = [
   {
-    title: "OCT-LS Data Processing Pipelines",
-    text: "Custom Python workflows for multimodal co-registration, MIP generation, ROI analysis, volume rendering, figure preparation, and quantitative interpretation of OCT-LS imaging datasets.",
+    title: "Automated Microscopy & Virtual H&E",
+    text: "Python-based microscopy control integrating XYZ acquisition, autofocus, frame averaging, background correction, stitching, organized data output, and parallel virtual H&E processing in one workflow.",
   },
   {
-    title: "Instrument Control and Environmental Support",
-    text: "Arduino and LabVIEW-based control for temperature regulation, CO₂ support, and integrated hardware workflows for long-term live embryo imaging experiments.",
+    title: "Zemax & Phase-Mask Optics",
+    text: "Optical design and performance analysis for AccessPath and array-microscopy systems, including relay design, phase-mask implementation, component selection, alignment strategy, and experimental validation.",
   },
   {
-    title: "Quantitative Imaging and Optical Analysis",
-    text: "Fiji, MATLAB, and Python-based analysis for attenuation mapping, vascular quantification, and multimodal data interpretation, together with Zemax based optical design and scan-lens performance analysis for laser scanning microscopy systems.",
+    title: "Quantitative Multimodal Imaging",
+    text: "MATLAB, Python, Fiji, Imaris, and Amira workflows for OCT reconstruction, attenuation mapping, multimodal co-registration, vascular analysis, segmentation, morphometry, 3D visualization, and image-quality assessment.",
   },
 ];
 
 const quickStats = [
-  { value: "7+ years", label: "Biomedical optics and imaging research" },
-  { value: "OCT, OCM, OCE, OCTA, LSFM", label: "Multimodal optical imaging platforms" },
-  { value: "1P + 2P", label: "Light-sheet and multiphoton implementations" },
-  { value: "Zebrafish & Mouse", label: "Embryogenesis imaging models" },
-  { value: "Zemax OpticStudio", label: "Optical design and performance analysis" },
-  { value: "Python / MATLAB / LabVIEW", label: "Analysis, automation, and visualization" },
-  { value: "Quantitative Imaging", label: "Attenuation mapping and vascular workflows" },
-  { value: "Publications + SPIE", label: "Peer-reviewed dissemination and conference presentations" },
+  { value: "Rice University", label: "Postdoctoral Associate · Richards-Kortum Lab" },
+  { value: "AccessPath", label: "Optics, automation, array microscopy, and virtual H&E" },
+  { value: "PrecisionView", label: "Optical-system development and characterization" },
+  { value: "OCT + 1P/2P LSFM", label: "Co-registered multimodal imaging platforms" },
+  { value: "Zemax OpticStudio", label: "Lens, relay, and imaging-system design" },
+  { value: "Python / MATLAB / LabVIEW", label: "Automation, analysis, and instrumentation" },
+  { value: "Zebrafish & Mouse", label: "Longitudinal embryonic imaging models" },
+  { value: "Quantitative Imaging", label: "Attenuation, registration, morphometry, and 3D analysis" },
 ];
 
 const galleryItems = [
@@ -377,6 +412,7 @@ const engagementItems = [
 
 const navItems = [
   { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
   { href: "#research", label: "Research" },
   { href: "#publications", label: "Publications" },
   { href: "#gallery", label: "Gallery" },
@@ -1381,7 +1417,7 @@ export default function App() {
           </div>
 
           <div className="relative z-10 lg:pr-4">
-            <SectionLabel>Biomedical Optics Researcher</SectionLabel>
+            <SectionLabel>Postdoctoral Associate · Rice University</SectionLabel>
 
             <motion.div
               initial={{ opacity: 0, y: 22 }}
@@ -1391,7 +1427,7 @@ export default function App() {
             >
 
               <h1 className="hero-balance text-3xl font-semibold leading-[1.02] text-white sm:text-4xl lg:text-6xl">
-                Co-registered multimodal imaging for embryonic development and biomedical optics
+                Optical and computational microscopy for biomedical imaging and digital pathology
               </h1>
             </motion.div>
 
@@ -1401,7 +1437,7 @@ export default function App() {
               transition={{ duration: 0.7, delay: 0.08 }}
               className="mt-7 max-w-3xl text-lg leading-9 text-slate-300 sm:text-xl"
             >
-              I developed very first co-registered multimodal imaging platforms based on optical coherence tomography and light-sheet fluorescence microscopy (OCT-LS) for simultaneous structural and molecular imaging. My work spans optical system development, quantitative tissue and image analysis, and custom software workflows for embryonic imaging in zebrafish and mouse models.
+              I am a Postdoctoral Associate in Dr. Rebecca Richards-Kortum’s laboratory at Rice University, developing optical and computational microscopy for AccessPath and PrecisionView. My current work spans Zemax optical design, automated XYZ microscopy, array microscopy and phase-mask optics, virtual H&E, and quantitative imaging, building on my Ph.D. development of co-registered OCT–LSFM platforms for embryo imaging.
             </motion.p>
 
             <motion.div
@@ -1491,9 +1527,9 @@ export default function App() {
                 <BookOpen className="h-4 w-4" />
                 Google Scholar
               </SecondaryButton>
-              <SecondaryButton href="/Md_Mobarak_Karim_CV.pdf">
+              <SecondaryButton href={ACADEMIC_CV_URL}>
                 <Download className="h-4 w-4" />
-                Download CV
+                Academic CV
               </SecondaryButton>
             </motion.div>
 
@@ -1503,13 +1539,13 @@ export default function App() {
               transition={{ duration: 0.74, delay: 0.22 }}
               className="mt-10 flex flex-wrap gap-3"
             >
-              <Tag>University of Houston</Tag>
-              <Tag>OCT, OCM, OCE, OCTA</Tag>
-              <Tag>One-photon and Two-photon LSFM</Tag>
-              <Tag>Biomedical Optics</Tag>
+              <Tag>Rice University</Tag>
+              <Tag>AccessPath</Tag>
+              <Tag>PrecisionView</Tag>
+              <Tag>Virtual H&E</Tag>
+              <Tag>Array Microscopy</Tag>
               <Tag>Zemax OpticStudio</Tag>
-              <Tag>Embryonic Imaging</Tag>
-              <Tag>Quantitative Imaging</Tag>
+              <Tag>OCT + 1P/2P LSFM</Tag>
             </motion.div>
           </div>
 
@@ -1619,16 +1655,16 @@ export default function App() {
               <GlassCard className="p-7 sm:p-8">
                 <SectionLabel>About</SectionLabel>
                 <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-                  Biomedical Optics Researcher and Multimodal Imaging Systems Developer
+                  Postdoctoral Researcher in Biomedical Optics and Computational Microscopy
                 </h2>
                 <p className="mt-5 text-base leading-8 text-slate-300">
-                  I earned my PhD in Biomedical Engineering from the University of Houston in Spring 2026. I have more than six years of research experience in biomedical optics, photonics, and multimodal optical imaging. My work focuses on the development of co-registered optical coherence tomography and light-sheet fluorescence microscopy platforms for embryonic imaging, integrating optical system design, two-photon microscopy, quantitative image analysis, and custom software tools for advanced biomedical imaging workflows.
+                  I am a Postdoctoral Associate in the Richards-Kortum Laboratory, Department of Bioengineering at Rice University. My current research focuses on optical and computational microscopy for AccessPath and PrecisionView, integrating optical design, automated image acquisition, computational processing, and translational imaging workflows.
                 </p>
                 <p className="mt-4 text-base leading-8 text-slate-300">
-                  I work at the intersection of optical system design, instrument integration, and biological imaging, with hands-on experience in beam delivery, optical alignment, scanning geometry optimization, environmental support for long-term imaging, and end-to-end data processing. My work spans zebrafish and mouse embryo models and focuses on translating advanced imaging technologies into quantitative tools for developmental biology, tissue optics, and phenotype analysis.
+                  For AccessPath, I develop Zemax-based optical designs and automated microscopy workflows that combine motorized XYZ acquisition, autofocus, averaging, background correction, stitching, and virtual H&E processing. I also lead Phase II optics activities involving array-microscopy architecture and phase-mask design, fabrication, and validation.
                 </p>
                 <p className="mt-4 text-base leading-8 text-slate-300">
-                  My background also includes Zemax-based optical analysis for laser scanning microscopy, including scan-lens evaluation, achromatic doublet optimization, aberration assessment, and imaging performance tradeoff analysis. Across research projects, I have contributed to system validation, multimodal co-registration, quantitative attenuation mapping, and publication-ready imaging workflows that support both methodological innovation and biological discovery.
+                  My Ph.D. research at the University of Houston focused on co-registered OCT–LSFM for structural and molecular imaging of embryonic development. I developed one- and two-photon light-sheet implementations, quantitative OCT attenuation methods, multimodal co-registration and analysis pipelines, and longitudinal imaging workflows for zebrafish and mouse embryos.
                 </p>
               </GlassCard>
             </motion.div>
@@ -1659,10 +1695,10 @@ export default function App() {
                         Research Profile
                       </div>
                       <h3 className="mt-3 text-2xl font-semibold text-white">
-                        Biomedical optics researcher focused on multimodal imaging
+                        Optical systems and computational microscopy researcher
                       </h3>
                       <p className="mt-4 text-sm leading-8 text-slate-300">
-                        My work combines optical coherence tomography, light-sheet fluorescence microscopy, quantitative image analysis, software development, and instrumentation design for embryonic imaging and translational biomedical optics.
+                        My work combines optical design, automated microscopy, computational imaging, virtual H&E, OCT, light-sheet microscopy, and quantitative analysis for translational biomedical imaging.
                       </p>
                       <div className="mt-5 flex flex-wrap gap-2">
                         <Tag>OCT</Tag>
@@ -1675,6 +1711,70 @@ export default function App() {
                 </GlassCard>
               </motion.div>
             </div>
+          </div>
+        </ParallaxSection>
+
+        <ParallaxSection id="experience" className="pb-14 lg:pb-20" glow="cyan">
+          <div className="mb-8 max-w-3xl">
+            <SectionLabel>Research Experience</SectionLabel>
+            <h2 className="text-3xl font-semibold text-white sm:text-5xl">
+              Optical system development from multimodal microscopy to translational imaging
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            {researchExperience.map((item, index) => (
+              <motion.div key={`${item.role}-${item.institution}`} {...fadeUp(index * 0.06)}>
+                <GlassCard
+                  className={`relative overflow-hidden p-6 sm:p-7 lg:p-8 transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)] ${
+                    index === 0
+                      ? "border-cyan-300/30 bg-cyan-400/[0.045]"
+                      : "hover:border-cyan-400/20 hover:bg-white/[0.05]"
+                  }`}
+                >
+                  {index === 0 && (
+                    <>
+                      <div className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-cyan-400/10 blur-[90px]" />
+                      <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-400/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-200">
+                        <Sparkles className="h-3.5 w-3.5" />
+                        Current Appointment
+                      </div>
+                    </>
+                  )}
+                  <div className="relative flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                    <div>
+                      <div className="flex items-center gap-3">
+                        <div className="rounded-2xl bg-cyan-400/10 p-3 text-cyan-300">
+                          <Briefcase className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-semibold text-white sm:text-2xl">{item.role}</h3>
+                          <p className="mt-1 text-sm font-medium text-cyan-300">{item.institution}</p>
+                        </div>
+                      </div>
+                      <p className="mt-4 text-sm text-slate-400">{item.lab}</p>
+                    </div>
+                    <div className="text-sm text-slate-400 lg:text-right">
+                      <div>{item.dates}</div>
+                      <div className="mt-1">{item.location}</div>
+                    </div>
+                  </div>
+
+                  <p className="relative mt-5 max-w-5xl text-sm leading-7 text-slate-300">{item.summary}</p>
+
+                  <ul className="relative mt-5 grid gap-3 lg:grid-cols-2">
+                    {item.highlights.map((highlight) => (
+                      <li
+                        key={highlight}
+                        className="rounded-[20px] border border-white/10 bg-slate-950/30 p-4 text-sm leading-7 text-slate-300"
+                      >
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                </GlassCard>
+              </motion.div>
+            ))}
           </div>
         </ParallaxSection>
 
@@ -1906,9 +2006,13 @@ export default function App() {
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
                   </SecondaryButton>
-                  <SecondaryButton href="/Md_Mobarak_Karim_Resume.pdf">
+                  <SecondaryButton href={ACADEMIC_CV_URL}>
                     <Download className="h-4 w-4" />
-                    Resume
+                    Academic CV
+                  </SecondaryButton>
+                  <SecondaryButton href={RESUME_URL}>
+                    <Download className="h-4 w-4" />
+                    2-Page Resume
                   </SecondaryButton>
                 </div>
               </div>
@@ -1929,10 +2033,10 @@ export default function App() {
                           m.k.mobarak@gmail.com
                         </a>
                         <a
-                          href="mailto:mkarim@uh.edu"
+                          href="mailto:mk280@rice.edu"
                           className="mt-1 block text-sm text-slate-400 transition hover:text-cyan-300"
                         >
-                          mkarim@uh.edu
+                          mk280@rice.edu
                         </a>
                       </div>
                     </div>
@@ -1946,7 +2050,7 @@ export default function App() {
                       <div>
                         <div className="text-sm uppercase tracking-[0.28em] text-cyan-300">Location</div>
                         <div className="mt-2 text-sm text-slate-300">Houston, Texas, USA</div>
-                        <div className="mt-1 text-sm text-slate-400">University of Houston • Biomedical Engineering</div>
+                        <div className="mt-1 text-sm text-slate-400">Rice University • Department of Bioengineering</div>
                       </div>
                     </div>
                   </div>
