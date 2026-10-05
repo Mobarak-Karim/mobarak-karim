@@ -24,6 +24,8 @@ import {
 
 const SCHOLAR_URL = "https://scholar.google.com/citations?user=pQwQspwAAAAJ&hl=en";
 const LINKEDIN_URL = "https://www.linkedin.com/in/md-mobarak-karim-259ab9124/";
+const ACADEMIC_CV_URL = "/Md_Mobarak_Karim_Academic_CV.pdf";
+const RESUME_URL = "/Md_Mobarak_Karim_Resume.pdf";
 
 const portfolioImages = {
   hero: "/images/hero-octls.jpg",
@@ -1525,9 +1527,9 @@ export default function App() {
                 <BookOpen className="h-4 w-4" />
                 Google Scholar
               </SecondaryButton>
-              <SecondaryButton href="/Md_Mobarak_Karim_Resume.pdf">
+              <SecondaryButton href={ACADEMIC_CV_URL}>
                 <Download className="h-4 w-4" />
-                Download CV
+                Academic CV
               </SecondaryButton>
             </motion.div>
 
@@ -1723,8 +1725,23 @@ export default function App() {
           <div className="space-y-6">
             {researchExperience.map((item, index) => (
               <motion.div key={`${item.role}-${item.institution}`} {...fadeUp(index * 0.06)}>
-                <GlassCard className="p-6 sm:p-7 lg:p-8 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[0.05] hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)]">
-                  <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                <GlassCard
+                  className={`relative overflow-hidden p-6 sm:p-7 lg:p-8 transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(34,211,238,0.08)] ${
+                    index === 0
+                      ? "border-cyan-300/30 bg-cyan-400/[0.045]"
+                      : "hover:border-cyan-400/20 hover:bg-white/[0.05]"
+                  }`}
+                >
+                  {index === 0 && (
+                    <>
+                      <div className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-cyan-400/10 blur-[90px]" />
+                      <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-400/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-200">
+                        <Sparkles className="h-3.5 w-3.5" />
+                        Current Appointment
+                      </div>
+                    </>
+                  )}
+                  <div className="relative flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                     <div>
                       <div className="flex items-center gap-3">
                         <div className="rounded-2xl bg-cyan-400/10 p-3 text-cyan-300">
@@ -1743,9 +1760,9 @@ export default function App() {
                     </div>
                   </div>
 
-                  <p className="mt-5 max-w-5xl text-sm leading-7 text-slate-300">{item.summary}</p>
+                  <p className="relative mt-5 max-w-5xl text-sm leading-7 text-slate-300">{item.summary}</p>
 
-                  <ul className="mt-5 grid gap-3 lg:grid-cols-2">
+                  <ul className="relative mt-5 grid gap-3 lg:grid-cols-2">
                     {item.highlights.map((highlight) => (
                       <li
                         key={highlight}
@@ -1989,9 +2006,13 @@ export default function App() {
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
                   </SecondaryButton>
-                  <SecondaryButton href="/Md_Mobarak_Karim_Resume.pdf">
+                  <SecondaryButton href={ACADEMIC_CV_URL}>
                     <Download className="h-4 w-4" />
-                    Resume
+                    Academic CV
+                  </SecondaryButton>
+                  <SecondaryButton href={RESUME_URL}>
+                    <Download className="h-4 w-4" />
+                    2-Page Resume
                   </SecondaryButton>
                 </div>
               </div>
